@@ -125,22 +125,34 @@ export default {
   background-image: url("https://img3.goodfon.com/original/1680x1050/0/2c/art-canarinu-kmes-paren-les.jpg");
 }
 h4 {
-  color: hotpink;
+  color: lightcyan;
   font: 600;
   border: indigo;
   border-style: inset;
+  border-radius: 5px;
+  display: inline;
   background-color: orangered;
 }
 h3 {
-  color: green;
+  color: lime;
   border: indigo;
   border-style: inset;
+  display: inline;
+  border-radius: 5px;
   background-color: blueviolet;
 }
 h1 {
   color: blue;
   border: indigo;
   border-style: inset;
+  display: inline;
+  border-radius: 5px;
   background-color: yellowgreen;
+}
+img {
+  border: indigo;
+  border-style: inset;
+  display: inline;
+  border-radius: 20px;
 }
 </style>
