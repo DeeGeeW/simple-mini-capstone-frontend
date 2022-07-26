@@ -127,6 +127,8 @@ export default {
 h4 {
   color: hotpink;
   font: 600;
+  border: indigo;
+  background-color: blueviolet;
 }
 h3 {
   color: green;
