@@ -161,4 +161,12 @@ img {
   display: inline;
   border-radius: 20px;
 }
+/* h2 {
+  color: yellow;
+  border: indigo;
+  border-style: inset;
+  display: inline;
+  border-radius: 5px;
+  background-color: yellowgreen;
+} */
 </style>
