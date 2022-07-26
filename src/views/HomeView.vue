@@ -128,12 +128,19 @@ h4 {
   color: hotpink;
   font: 600;
   border: indigo;
-  background-color: blueviolet;
+  border-style: inset;
+  background-color: orangered;
 }
 h3 {
   color: green;
+  border: indigo;
+  border-style: inset;
+  background-color: blueviolet;
 }
 h1 {
   color: blue;
+  border: indigo;
+  border-style: inset;
+  background-color: yellowgreen;
 }
 </style>
