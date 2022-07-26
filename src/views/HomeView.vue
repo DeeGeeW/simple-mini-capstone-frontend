@@ -10,8 +10,9 @@
     <input type="text" v-model="newProduct.price" />
     Image URL
     <input type="text" v-model="newProduct.image_url" />
-    <button v-on:click="createProduct">Create</button>
+    <button v-on:click="createProduct()">Create</button>
     <br />
+    <!-- <div v-for="error in errors" v-bind="product.id"></div> -->
     <div v-for="product in products" v-bind:key="product.id">
       <br />
       <h3>{{ product.name }}</h3>
