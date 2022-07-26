@@ -121,6 +121,9 @@ export default {
 </script>
 
 <style>
+.home {
+  background-image: url("https://img3.goodfon.com/original/1680x1050/0/2c/art-canarinu-kmes-paren-les.jpg");
+}
 h4 {
   color: hotpink;
   font: 600;
