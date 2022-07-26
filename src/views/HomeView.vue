@@ -11,12 +11,18 @@
     Image URL
     <input type="text" v-model="newProduct.image_url" />
     <button v-on:click="createProduct">Create</button>
+    <br />
     <div v-for="product in products" v-bind:key="product.id">
+      <br />
       <h3>{{ product.name }}</h3>
+      <br />
+      <br />
       <div>
         <button v-on:click="showProduct(product)">Info</button>
       </div>
+      <br />
       <h4>Description: {{ product.description }}</h4>
+      <br />
       <p>price: {{ product.price }}</p>
       <img v-bind:src="product.image_url" v-bind:alt="product.name" style="max-width: 250px" />
     </div>
