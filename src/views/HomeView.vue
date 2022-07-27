@@ -91,12 +91,16 @@ export default {
           console.log(error.response);
         });
     },
-    showProduct(product) {
-      axios.get(`http://localhost:3000/products/${product.id}`).then((response) => {
-        this.currentProduct = response.data;
-        this.editProduct = response.data;
-        document.querySelector("#product-details").showModal();
-      });
+    // showProduct(product) {
+    //   axios.get(`http://localhost:3000/products/${product.id}`).then((response) => {
+    //     this.currentProduct = response.data;
+    //     this.editProduct = response.data;
+    //     document.querySelector("#product-details").showModal();
+    //   });
+    // },
+    showProduct: function (product) {
+      console.log(product);
+      document.querySelector("#product-details").showModal();
     },
     updateProduct() {
       axios
