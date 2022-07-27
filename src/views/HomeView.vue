@@ -11,7 +11,6 @@
     Image URL
     <input type="text" v-model="newProduct.image_url" />
     <button v-on:click="createProduct()">Create</button>
-    <br />
     <div class="errors" v-for="error in errors" v-bind:key="error">
       {{ error }}
     </div>
@@ -96,6 +95,7 @@ export default {
         })
         .catch((error) => {
           console.log(error.response);
+          this.errors = error.response.data.errors;
         });
     },
     showProduct(product) {
@@ -120,6 +120,7 @@ export default {
         })
         .catch((error) => {
           console.log(error.response);
+          this.errors = error.response.data.errors;
         });
     },
     deleteProduct(product) {
