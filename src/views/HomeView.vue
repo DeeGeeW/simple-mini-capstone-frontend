@@ -12,7 +12,10 @@
     <input type="text" v-model="newProduct.image_url" />
     <button v-on:click="createProduct()">Create</button>
     <br />
-    <!-- <div v-for="error in errors" v-bind="product.id"></div> -->
+    <div class="errors" v-for="error in errors" v-bind:key="error">
+      {{ error }}
+    </div>
+
     <div v-for="product in products" v-bind:key="product.id">
       <br />
       <h3>{{ product.name }}</h3>
@@ -52,6 +55,9 @@
           <input v-model="currentProduct.image_url" type="text" />
         </p>
         <button v-on:click="updateProduct()">Update</button>
+        <div class="errors" v-for="error in errors" v-bind:key="error">
+          {{ error }}
+        </div>
         <button v-on:click="deleteProduct(currentProduct)">Delete</button>
         <button>Close</button>
       </form>
@@ -69,6 +75,7 @@ export default {
       products: [],
       newProduct: {},
       currentProduct: {},
+      errors: [],
     };
   },
   created: function () {
@@ -91,17 +98,17 @@ export default {
           console.log(error.response);
         });
     },
-    // showProduct(product) {
-    //   axios.get(`http://localhost:3000/products/${product.id}`).then((response) => {
-    //     this.currentProduct = response.data;
-    //     this.editProduct = response.data;
-    //     document.querySelector("#product-details").showModal();
-    //   });
-    // },
-    showProduct: function (product) {
-      console.log(product);
-      document.querySelector("#product-details").showModal();
+    showProduct(product) {
+      axios.get(`http://localhost:3000/products/${product.id}`).then((response) => {
+        this.currentProduct = response.data;
+        this.editProduct = response.data;
+        document.querySelector("#product-details").showModal();
+      });
     },
+    // showProduct: function (product) {
+    //   console.log(product);
+    //   document.querySelector("#product-details").showModal();
+    // },
     updateProduct() {
       axios
         .patch(`http://localhost:3000/products/${this.currentProduct.id}`, this.currentProduct)
@@ -178,6 +185,9 @@ button {
   padding: 3px;
   background-color: aquamarine;
   color: blueviolet;
+}
+.errors {
+  color: red;
 }
 /* h2 {
   color: yellow;
