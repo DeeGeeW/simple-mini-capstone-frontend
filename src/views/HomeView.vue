@@ -145,11 +145,12 @@ export default {
 }
 h4 {
   color: lightcyan;
-  font: 600;
-  padding: 3px;
+  /* font: 600; */
+  /* padding: 3px; */
   border: indigo;
   border-style: inset;
   border-radius: 5px;
+  margin: 2px;
   display: inline;
   background-color: orangered;
 }
@@ -159,6 +160,7 @@ h3 {
   padding: 3px;
   border-style: inset;
   display: inline;
+  margin: 2px;
   border-radius: 5px;
   background-color: blueviolet;
 }
@@ -167,6 +169,7 @@ h1 {
   border: indigo;
   border-style: inset;
   padding: 3px;
+  margin: 2px;
   display: inline;
   border-radius: 5px;
   background-color: yellowgreen;
@@ -175,6 +178,7 @@ img {
   border: indigo;
   border-style: inset;
   padding: 3px;
+  margin: 2px;
   display: inline;
   border-radius: 20px;
   background-color: orangered;
