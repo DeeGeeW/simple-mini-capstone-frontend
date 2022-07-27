@@ -134,6 +134,7 @@ export default {
 <style>
 .home {
   background-image: url("https://img3.goodfon.com/original/1680x1050/0/2c/art-canarinu-kmes-paren-les.jpg");
+  font-family: "Sriracha", cursive;
 }
 h4 {
   color: lightcyan;
